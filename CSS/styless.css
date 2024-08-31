@@ -21,7 +21,20 @@ header img {
     height: 10%;
     margin-top: 15px;
 }
-
+.retrato {
+    display: flex;
+        flex-direction: row;
+        justify-content: left;
+        margin-top: 15px;
+        
+}
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-top: -240px;
+    font-size: 12px;
+}
 nav ul {
     list-style: none;
     display: flex;
@@ -74,23 +87,58 @@ form textarea {
     margin-top: 0.5rem;
 }
 
-form button {
-    margin-top: 1rem;
-    padding: 0.5rem 2rem;
-    background-color: #333;
-    color: white;
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #3d405b;
     border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 16px;
+    width: 130px;
+    transition: all 0.5s;
     cursor: pointer;
+    margin: 5px;
+    margin-top: 20px;
+    
+}
+
+button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -15px;
+    transition: 0.5s;
+}
+
+button:hover span {
+    padding-right: 15px;
+}
+
+button:hover span:after {
+    opacity: 1;
+    right: 0;
 }
 
 footer {
+    
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 1rem 0;
+    padding:1rem 0;
     position: fixed;
     width: 100%;
     bottom: 0;
+    margin-bottom: 0;
 }
 #about h2 {
     margin-bottom: 40px;
@@ -101,6 +149,7 @@ footer {
     width: 20%;
     max-width: 400px;
     margin-bottom: 20px;
+    border-radius: 50%;
 }
 @media (max-width: 768px) {
     #about img {
@@ -195,4 +244,11 @@ footer {
     75% {
         transform: rotate(-10deg);
     }
+}
+#contact {
+    padding: 60px;
+    background-color: #d7d7d7;
+}
+#contact h2{
+    margin-bottom: 40px;
 }
